@@ -14,21 +14,37 @@ function setup(){
     canvas = createCanvas(800,600);
 
     //create 4 different surfaces
-    surface1 = createSprite(95,580,180,25);
+    var surface1_options={
+        isStatic:true
+    }
+    surface1 = createSprite(95,580,180,25,surface1_options);
     surface1.shapeColor = "blue";
-
-    surface2 = createSprite(300,580,180,25);
+    
+    var surface2_options={
+        isStatic:true
+    }
+    surface2 = createSprite(300,580,180,25,surface2_options);
     surface2.shapeColor = "orange";
 
-    surface3 = createSprite(500,580,180,25);
+    var surface3_options={
+        isStatic:true
+    }
+    surface3 = createSprite(500,580,180,25,surface3_options);
     surface3.shapeColor = "red";
 
-    surface4 = createSprite(705,580,180,25);
+    var surface4_options={
+        isStatic:true
+    }
+    surface4 = createSprite(705,580,180,25,surface4_options);
     surface4.shapeColor = "green";
     
 
     //create box sprite and give velocity
-    box = createSprite(500,100,40,40);
+    var box_options={
+        restitution:2
+    }
+    
+    box = createSprite(500,100,40,40,box_options);
     box.x=random(20,750);
     
     box.shapeColor= "white";
