@@ -46,6 +46,7 @@ function setup(){
     
     box = createSprite(500,100,40,40,box_options);
     box.x=random(20,750);
+    box.y=random(10,800);
     
     box.shapeColor= "white";
     box.velocityY=3;
@@ -58,7 +59,7 @@ function draw() {
     Edges=createEdgeSprites();
     
     if(box.isTouching(Edges)){
-        box.bounceoff(Edges);
+        box.bounceOff(Edges);
     }
 
     drawSprites();
@@ -66,22 +67,22 @@ function draw() {
     //add condition to check if box touching surface and make it box
     if(surface1.isTouching(box) ){
         box.shapeColor = "blue";
-         box.bounceoff(surface1)
+         box.bounceOff(surface1)
     }
 
     if(surface2.isTouching(box) ){
         box.shapeColor = "orange";
-         box.bounceoff(surface2)
+         box.bounceOff(surface2)
     }
 
     if(surface3.isTouching(box) ){
         box.shapeColor = "red";
-         box.bounceoff(surface3)
+         box.bounceOff(surface3)
     }
 
     if(surface4.isTouching(box) ){
         box.shapeColor = "green";
-         box.bounceoff(surface4)
+         box.bounceOff(surface4)
     }
 
 
